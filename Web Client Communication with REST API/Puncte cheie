@@ -1,0 +1,24 @@
+Surdu Cristian
+321CD
+Tema3 Protocoale de Comunicatii
+
+Am folosit ca punct de plecare structura laboratorului 10 de pe OCW
+Am modificat fisierele request.c si request.h mai exact funtiile de compute_get_request,compute_post_request si compute_del_request ca sa ma pot folosii de token
+
+M-am folosit de functiile predefinite in libraria json pentru a parsa user si parola cat si detaliile cartilor
+
+In client.c am pornit tot de la labul 10 am deschis conectiunea si am citit de la tastatura o comanda
+Dupa ce o citesc o compar pe rand cu comenzile din cerinta si intru pe cazul respectiv
+Acolo primesc un mesaj de la server si caut in el token sau cookieul de care am nevoie folosindu ma de functiile precum strstr si strcmp.
+In register-verific daca userul sau parola contin spatii caz in care returnez mesaj de eroare sau daca utilizatorul este deja creat
+In login-imi creez o variabila 'conectat' care ma va ajuta sa tratez cazurile de eroare din if urile urmatoare practic un ok care verifica daca sunt sau nu logat
+si retin cookieul
+In enter-library verific daca sunt logat si dupa verific daca am primit tokenul
+In get-books-verific daca sunt in librarie printr un alt ok facut la iful precedent si afisez toate cartile cu informatii sumare
+In get-book-verific daca sunt in librarie
+verific daca id-ul este un numar negativ
+concatenez stringuri pentru a forma ruta de aces
+si afisez informatii elgate de cartea respectiva
+In add-book -verifi daca am acces in librarie si realizez obiectul json pe care il trimit la server salvand in fiecare variabila datele date de la tastatura
+In delete-book-verific daca am acces in librarie si retin id ul cartii pe care vreau sa o stergverific daca e valid si dupa sterg cartea din server
+logout-verific daca user este logat si il sterg pe acesta
